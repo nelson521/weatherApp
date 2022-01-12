@@ -6,7 +6,7 @@ let weatherText = document.getElementById('weatherText');
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
   let res = await axios.get(
-    `http://api.openweathermap.org/data/2.5/weather?q=philadelphia&units=imperial&appid=${key}`
+    `http://api.openweathermap.org/data/2.5/weather?q=${cityInput.value}&units=imperial&appid=${key}`
   );
 
   let text = document.createTextNode(
