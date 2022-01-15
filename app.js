@@ -14,5 +14,11 @@ form.addEventListener('submit', async (e) => {
   );
 
   weatherText.appendChild(text);
-  console.log(cityInput.value);
+  // remove child node from weather text
+  if (weatherText.childNodes.length > 1) {
+    weatherText.childNodes[0].remove();
+  }
+  console.log(weatherText.childNodes);
+  // Clear
+  cityInput.value = '';
 });
