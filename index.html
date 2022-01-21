@@ -11,20 +11,23 @@
     />
     <title>Weather App</title>
   </head>
-  <body class="bg-info">
+  <body>
     <div class="container">
       <div class="row">
-        <h1 class="text-center mt-5 display-4">Welcome To My Weather App</h1>
-        <form id="weatherForm" class="">
-          <label for="city">City</label>
+        <h1 class="text-center mt-5 display-4">Today's weather</h1>
+        <div class="text-center text-muted">
+          <h3>As of right now <span id="timeStamp"></span></h3>
+        </div>
+        <form id="weatherForm" class="text-center">
+          <label for="city">Type City</label>
           <input id="cityInput" type="text" />
           <button class="btn btn-primary">Submit</button>
         </form>
-        <div class="card col justify-content-center" style="width: 18rem">
-          <img src="" class="card-img-top" alt="weather image" />
-          <div class="card-body">
-            <p id="weatherText" class="card-text"></p>
-          </div>
+      </div>
+      <div class="row">
+        <div class="col-5 bg-warning mt-4">
+          <div class="display-4" id="temp"></div>
+          <div class="" id="description"><span id="icon"></span></div>
         </div>
       </div>
     </div>
