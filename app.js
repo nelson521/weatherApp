@@ -28,9 +28,11 @@ startTime();
 
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
+
   let res = await axios.get(
     `http://api.openweathermap.org/data/2.5/weather?q=${cityInput.value}&units=imperial&appid=${key}`
   );
+
   let currentWeather = document.createTextNode(Math.trunc(res.data.main.temp));
 
   let currentDescription = document.createTextNode(
@@ -56,6 +58,11 @@ form.addEventListener('submit', async (e) => {
   img.src = `http://openweathermap.org/img/wn/${res.data.weather[0].icon}@2x.png`;
   // append image
   div.appendChild(img);
+
+  // remove second picture
+  if (parent.childNodes.length > 1) {
+    parent.childNodes[0].remove();
+  }
 
   // remove child node
   if (temp.childNodes.length > 1 || description.childNodes.length > 1) {
