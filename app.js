@@ -50,7 +50,7 @@ form.addEventListener('submit', async (e) => {
   // Add div
   let div = document.createElement('div');
   // Add class
-  div.classList = 'justify-content-end';
+  div.classList = 'text-center';
   let parent = document.getElementById('parent');
   parent.insertBefore(div, temp);
 
@@ -78,5 +78,3 @@ form.addEventListener('submit', async (e) => {
   // Clear
   cityInput.value = '';
 });
-
-// src = ;
