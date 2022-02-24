@@ -30,7 +30,7 @@ form.addEventListener('submit', async (e) => {
   e.preventDefault();
 
   let res = await axios.get(
-    `http://api.openweathermap.org/data/2.5/weather?q=${cityInput.value}&units=imperial&appid=${key}`
+    `https://api.openweathermap.org/data/2.5/weather?q=${cityInput.value}&units=imperial&appid=${key}`
   );
 
   let currentWeather = document.createTextNode(Math.trunc(res.data.main.temp));
