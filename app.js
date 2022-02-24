@@ -55,7 +55,7 @@ form.addEventListener('submit', async (e) => {
   parent.insertBefore(div, temp);
 
   // Add source link
-  img.src = `http://openweathermap.org/img/wn/${res.data.weather[0].icon}@2x.png`;
+  img.src = `https://openweathermap.org/img/wn/${res.data.weather[0].icon}@2x.png`;
   // append image
   div.appendChild(img);
 
